@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Ghostwriter example</title>
+    <title>Posts on sidaojun&#39;s website</title>
     <link>https://sidaojun.com/post/</link>
-    <description>Recent content in Posts on Ghostwriter example</description>
+    <description>Recent content in Posts on sidaojun&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Si Daojun</copyright>
+    <lastBuildDate>Wed, 02 Apr 2014 02:13:50 +0000</lastBuildDate>
     
 	<atom:link href="https://sidaojun.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://sidaojun.com/2014/04/02/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/2014/04/02/goisforlovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
+    </item>
     
     <item>
       <title></title>
@@ -31,6 +42,21 @@ modufile默认版本的设置 可以通过设置要加载的modulefile的默认�
 如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：
 #%Module1.0 ## ## The desired version of GCC ## set ModuleVersion &amp;quot;4.9.4&amp;quot;   定义.modulerc文件 方法如下：
 #%Module1.0 ## ## The desired version of GCC ## module-version &amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://sidaojun.com/1/01/01/fvcom-install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/1/01/01/fvcom-install/</guid>
+      <description>FVCOM FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。
+我将在TH-HPC1系统上安装该软件，以下是安装记录。
+下载 由用户提供：fvcom-3.2.tar.gz (166MB)
+编译 编译环境加载 module add Intel_compiler/16.0.3 module add MPI/Intel/IMPI/5.1.3.210 module add MKL/16.0.3  上传并解压缩 将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。
+tar xvf FVCOM3.2.2.tar.gz cd FVCOM3.2.2/ cd FVCOM_source/  修改配置文件make.inc 先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。
+cp make.inc_example make.inc vim make.inc  然后逐步手动修改相关参数：
+# 修改为实际的源码目录 #========== TOPDIR ======================================================== # TOPDIR is the directory in which this make file and the fvcom source reside TOPDIR = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source #=========================================================================== # 预编译参数 #=========================================================================== # PREPROCESSOR OPTIONS FOR CPP DEF_FLAGS = -P -C -traditional -nostdinc -E #=========================================================================== # 本地安装 #=========================================================================== # LOCAL INSTAL LIBDIR = -L$(INSTALLDIR)/lib INCDIR = -I$(INSTALLDIR)/include #=========================================================================== # 需要用到julian库 #-------------------------------------------------------------------------- # STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM: # DTLIBS = -ljulian DTINCS = #-------------------------------------------------------------------------- # 需要用到netcdf库 #-------------------------------------------------------------------------- # NETCDF OUTPUT NETCDF IS NOW REQUIRED TO COMPILE FVCOM # DUMP OUTPUT INTO NETCDF FILES (yes/no) # REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES # COMPILED WITH SAME F90 COMPILER # SET PATH TO LIBRARIES WITH IOLIBS # SET PATH TO INCLUDE FILES (netcdf.</description>
     </item>
     
   </channel>

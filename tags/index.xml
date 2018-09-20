@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Ghostwriter example</title>
+    <title>Tags on sidaojun&#39;s website</title>
     <link>https://sidaojun.com/tags/</link>
-    <description>Recent content in Tags on Ghostwriter example</description>
+    <description>Recent content in Tags on sidaojun&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Si Daojun</copyright>
+    <lastBuildDate>Wed, 02 Apr 2014 02:13:50 +0000</lastBuildDate>
     
 	<atom:link href="https://sidaojun.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Development</title>
+      <link>https://sidaojun.com/tags/development/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://sidaojun.com/tags/go/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://sidaojun.com/tags/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Templates</title>
+      <link>https://sidaojun.com/tags/templates/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/tags/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Themes</title>
+      <link>https://sidaojun.com/tags/themes/</link>
+      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://sidaojun.com/tags/themes/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
