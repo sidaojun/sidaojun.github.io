@@ -29,14 +29,5 @@
       <description>FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。 我将在TH-HPC1系统上安装该软件，以下是安装记录。 下载 由</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>http://localhost:1313/post/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/about/</guid>
-      <description>#关于我 地球物理学专业毕业，现从事HPC（高性能计算）相关工作。 #建站目的 工作中涉及多方面工作，希望有所记、有所查，也能对相关工作的从业者有</description>
-    </item>
-    
   </channel>
 </rss>
