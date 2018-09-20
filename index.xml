@@ -1,62 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sidaojun&#39;s website</title>
-    <link>https://sidaojun.com/</link>
-    <description>Recent content on sidaojun&#39;s website</description>
+    <title>sidaojun - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on sidaojun - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Si Daojun</copyright>
     <lastBuildDate>Thu, 30 Aug 2018 08:13:50 +0000</lastBuildDate>
     
-	<atom:link href="https://sidaojun.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Environment Modules</title>
-      <link>https://sidaojun.com/2018/08/30/environment-modules/</link>
+      <link>http://localhost:1313/post/environment-modules/</link>
       <pubDate>Thu, 30 Aug 2018 08:13:50 +0000</pubDate>
       
-      <guid>https://sidaojun.com/2018/08/30/environment-modules/</guid>
-      <description>Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。
-一、安装 必要条件 Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）
-安装步骤 按照通常的软件安装步骤进行，分为如下三步： - ./configure &amp;ndash;prefix=/directory/you/want/to/install - make - make install
-官方安装说明网址 https://modules.readthedocs.io/en/stable/INSTALL.html
-二、module的配置和使用 初始化操作 为了每次登陆shell时，可以使用module，需要进行初始化操作，执行如下命令：
-source /directory/you/want/to/install/init/bash  不同的shell类型执行对应脚本。
-modulefiles路径的定义 module对环境变量的修改是通过操作modulefiles来实现的，因此需要对此进行定义。有以下几种方式： - 编辑init目录下的modulerc文件； - 编辑init目录下的.modulespath文件； - 在.bashrc中添加命令module use 文件名，类似:
-module use /path/to/modulefiles  建议采用前面两种方式。
-环境变量MODULEPATH保存了包含modulefiles的路径，即系统查找modulefiles的路径。
-modulefiles文件的定位 系统会搜索MODULEPATH中的每个目录。MODULEPATH中的目录可以有很多层。如果用户加载的modulefile是个目录，系统会向下搜索真正的modulefile文件。
-modufile默认版本的设置 可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式： - 定义.version文件
-如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：
-#%Module1.0 ## ## The desired version of GCC ## set ModuleVersion &amp;quot;4.9.4&amp;quot;   定义.modulerc文件 方法如下：
-#%Module1.0 ## ## The desired version of GCC ## module-version &amp;quot;.</description>
+      <guid>http://localhost:1313/post/environment-modules/</guid>
+      <description>Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。 一、安装 必要条件 Modul</description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://sidaojun.com/2014/04/02/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
+      <title>FVCOM</title>
+      <link>http://localhost:1313/post/fvcom-install/</link>
+      <pubDate>Thu, 30 Aug 2018 08:13:50 +0000</pubDate>
       
-      <guid>https://sidaojun.com/2014/04/02/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://sidaojun.com/1/01/01/fvcom-install/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sidaojun.com/1/01/01/fvcom-install/</guid>
-      <description>FVCOM FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。
-我将在TH-HPC1系统上安装该软件，以下是安装记录。
-下载 由用户提供：fvcom-3.2.tar.gz (166MB)
-编译 编译环境加载 module add Intel_compiler/16.0.3 module add MPI/Intel/IMPI/5.1.3.210 module add MKL/16.0.3  上传并解压缩 将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。
-tar xvf FVCOM3.2.2.tar.gz cd FVCOM3.2.2/ cd FVCOM_source/  修改配置文件make.inc 先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。
-cp make.inc_example make.inc vim make.inc  然后逐步手动修改相关参数：
-# 修改为实际的源码目录 #========== TOPDIR ======================================================== # TOPDIR is the directory in which this make file and the fvcom source reside TOPDIR = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source #=========================================================================== # 预编译参数 #=========================================================================== # PREPROCESSOR OPTIONS FOR CPP DEF_FLAGS = -P -C -traditional -nostdinc -E #=========================================================================== # 本地安装 #=========================================================================== # LOCAL INSTAL LIBDIR = -L$(INSTALLDIR)/lib INCDIR = -I$(INSTALLDIR)/include #=========================================================================== # 需要用到julian库 #-------------------------------------------------------------------------- # STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM: # DTLIBS = -ljulian DTINCS = #-------------------------------------------------------------------------- # 需要用到netcdf库 #-------------------------------------------------------------------------- # NETCDF OUTPUT NETCDF IS NOW REQUIRED TO COMPILE FVCOM # DUMP OUTPUT INTO NETCDF FILES (yes/no) # REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES # COMPILED WITH SAME F90 COMPILER # SET PATH TO LIBRARIES WITH IOLIBS # SET PATH TO INCLUDE FILES (netcdf.</description>
+      <guid>http://localhost:1313/post/fvcom-install/</guid>
+      <description>FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。 我将在TH-HPC1系统上安装该软件，以下是安装记录。 下载 由</description>
     </item>
     
   </channel>

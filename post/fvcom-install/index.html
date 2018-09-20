@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>FVCOM - sidaojun - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="司道军" /><meta name="description" content="海洋模式" />
+
+  <meta name="keywords" content="Hugo, theme, sidaojun" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/fvcom-install/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="FVCOM" />
+<meta property="og:description" content="海洋模式" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/fvcom-install/" /><meta property="article:published_time" content="2018-08-30T08:13:50&#43;00:00"/>
+<meta property="article:modified_time" content="2018-08-30T08:13:50&#43;00:00"/>
+<meta itemprop="name" content="FVCOM">
+<meta itemprop="description" content="海洋模式">
+
+
+<meta itemprop="datePublished" content="2018-08-30T08:13:50&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-30T08:13:50&#43;00:00" />
+<meta itemprop="wordCount" content="1448">
+
+
+
+<meta itemprop="keywords" content="HPC,ocean modeling," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="FVCOM"/>
+<meta name="twitter:description" content="海洋模式"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">sidaojun</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">sidaojun</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">FVCOM</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-08-30 </span>
+        <div class="post-category">
+            
+              <a href="/categories/hpc-applications/"> HPC Applications </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#下载">下载</a></li>
+<li><a href="#编译">编译</a>
+<ul>
+<li><a href="#编译环境加载">编译环境加载</a></li>
+<li><a href="#上传并解压缩">上传并解压缩</a></li>
+<li><a href="#修改配置文件make-inc">修改配置文件make.inc</a></li>
+</ul></li>
+<li><a href="#修改makedepends">修改makedepends</a></li>
+<li><a href="#编译lib库的内容">编译lib库的内容</a>
+<ul>
+<li><a href="#编译fvcom">编译fvcom</a></li>
+</ul></li>
+<li><a href="#报错记录">报错记录</a>
+<ul>
+<li><a href="#修改预编译参数">修改预编译参数</a></li>
+<li><a href="#修改makedepends-1">修改makedepends</a></li>
+<li><a href="#手动编译netcdf">手动编译netcdf</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。</p>
+
+<p>我将在TH-HPC1系统上安装该软件，以下是安装记录。</p>
+
+<h2 id="下载">下载</h2>
+
+<p>由用户提供：fvcom-3.2.tar.gz (166MB)</p>
+
+<h2 id="编译">编译</h2>
+
+<h3 id="编译环境加载">编译环境加载</h3>
+
+<pre><code>module add Intel_compiler/16.0.3 
+module add MPI/Intel/IMPI/5.1.3.210
+module add MKL/16.0.3
+</code></pre>
+
+<h3 id="上传并解压缩">上传并解压缩</h3>
+
+<p>将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。</p>
+
+<pre><code>tar xvf FVCOM3.2.2.tar.gz
+cd FVCOM3.2.2/
+cd FVCOM_source/
+</code></pre>
+
+<h3 id="修改配置文件make-inc">修改配置文件make.inc</h3>
+
+<p>先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。</p>
+
+<pre><code>cp make.inc_example  make.inc
+vim make.inc
+</code></pre>
+
+<p>然后逐步手动修改相关参数：</p>
+
+<pre><code># 修改为实际的源码目录
+#========== TOPDIR ========================================================
+# TOPDIR is the directory in which this make file and the fvcom source reside
+           TOPDIR        = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source
+#===========================================================================
+
+# 预编译参数
+#===========================================================================
+# PREPROCESSOR OPTIONS FOR CPP
+            DEF_FLAGS     = -P -C -traditional -nostdinc -E
+#===========================================================================
+
+# 本地安装
+#===========================================================================
+# LOCAL INSTAL
+             LIBDIR       =  -L$(INSTALLDIR)/lib
+             INCDIR       =  -I$(INSTALLDIR)/include
+#===========================================================================
+
+# 需要用到julian库
+#--------------------------------------------------------------------------
+#       STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM:
+#
+            DTLIBS      = -ljulian
+            DTINCS      =
+#--------------------------------------------------------------------------
+
+# 需要用到netcdf库
+#--------------------------------------------------------------------------
+#        NETCDF OUTPUT      NETCDF IS NOW REQUIRED TO COMPILE FVCOM
+#                           DUMP OUTPUT INTO NETCDF FILES (yes/no)
+#                           REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES
+#                           COMPILED WITH SAME F90 COMPILER
+#                           SET PATH TO LIBRARIES WITH IOLIBS
+#                           SET PATH TO INCLUDE FILES (netcdf.mod) WITH IOINCS
+#--------------------------------------------------------------------------
+             IOLIBS       =  -lnetcdf
+             IOINCS       =  
+#--------------------------------------------------------------------------
+
+# 需要用到metis库
+#--------------------------------------------------------------------------
+#        MULTI_PROCESSOR    INCLUDES PARALLELIZATION WITH MPI
+#                           REQUIRES LINKING MPI LIBRARIES OR COMPILING
+#                           WITH A PRELINKED SCRIPT (mpif90/mpf90/etc)
+#                           DEFAULT: NO PARALLEL CAPABILITY
+#                           UNCOMMENT TO INCLUDE MPI PARALLEL CAPABILITY
+#--------------------------------------------------------------------------
+             FLAG_4 = -DMULTIPROCESSOR
+             PARLIB = -lmetis
+# --------------------------------------------------------------------------
+
+# 需要用到proj4库
+#--------------------------------------------------------------------------
+#        PROJECTION         A Fortran90 wrapper for the Cartographic projection
+#                           Software, proj4.
+#                           Proj can be obtained from:
+#                           http://www.remotesensing.org/proj/
+#                           Thanks to: USGS
+#
+#                           The Proj fortran bindings can be obtained from:
+#                           http://forge.nesc.ac.uk/projects/glimmer/
+#                           Thanks to: Magnus Hagdorn (Magnus.Hagdorn@ed.ac.uk)
+#
+#                           !! NOTE THAT THE PROJ 4 LIBRARY MUST BE IN YOUR
+#                           LD_LIBRARY_PATH FOR DYNAMIC LOADING!!
+#
+#--------------------------------------------------------------------------
+             FLAG_6 = -DPROJ
+             PROJLIBS       = -lfproj4 -lproj -lm
+             PROJINCS       =
+#--------------------------------------------------------------------------
+
+# 需要用到mkl库
+#--------------------------------------------------------------------------
+#        DATA_ASSIMILATION  INCLUDE NUDGING BASED DATA ASSIMILATION FOR
+#                           CURRENT/TEMP/SALINITY/SST
+#                           CAN BE ACTIVATED/DEACTIVATED AT RUN TIME WITH
+#                           INPUT FILE CONTROL.  (SEE exa_run.dat) FILE
+#                           DEFAULT: NO DATA ASSIMILATION INCLUDED
+#                           UNCOMMENT TO INCLUDE DATA ASSIMILATION
+#--------------------------------------------------------------------------
+
+             FLAG_7 = -DDATA_ASSIM
+             OILIB  = -L$(MKLROOT)/lib/intel64 \
+                      -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread
+#--------------------------------------------------------------------------
+
+# 编译参数配置
+#--------------------------------------------------------------------------
+#  Intel/MPI Compiler Definitions (SMAST)
+#--------------------------------------------------------------------------
+         CPP      = /usr/bin/cpp
+         COMPILER = -DIFORT
+         CC       = mpiicc
+         CXX      = mpiicpc
+         CFLAGS   = -O3
+         FC       = mpiifort 
+         OPT      = -O3
+#--------------------------------------------------------------------------
+</code></pre>
+
+<p><strong>其他模块的选择，请用户根据自身需求进行配置，但基本上不涉及额外库的编译，仅宏红选项是否开启有关，详见make.inc文件的相关英文说明。</strong></p>
+
+<h2 id="修改makedepends">修改makedepends</h2>
+
+<p>打开makedepends文件，修改其中的内容，可以用如下命令进行文件的修改：</p>
+
+<pre><code>sed -i &quot;s/mod_prec.o : mod_prec.F mod_prec.o/mod_prec.o : mod_prec.F/g&quot; makedepends
+</code></pre>
+
+<p>在48行行尾手动追加&rdquo;mod_nesting.o&rdquo;</p>
+
+<pre><code>mod_startup.o : mod_startup.F ... ... mod_nctools.o mod_utils.o mod_prec.o mod_nesting.o # 48行
+</code></pre>
+
+<h2 id="编译lib库的内容">编译lib库的内容</h2>
+
+<pre><code>cd lib
+vim makefile
+</code></pre>
+
+<p>将以下两行注释掉</p>
+
+<pre><code># cd netcdf &amp;&amp; ./configure CC=$(CC) CFLAGS=-O3 CXX=$(CC) CXXFLAGS=-O3 F77=$(FC) F90=$(FC) FFLAGS=-O3 --prefix=$(MYINSTALLDIR) --build=$(MACHTYPE)
+# cd netcdf &amp;&amp; make install
+</code></pre>
+
+<p>然后编译除了netcdf以外其他库</p>
+
+<pre><code>make
+</code></pre>
+
+<p>我们前往netcdf官网手动下载netcdf-3.6.3版本，将netcdf-3.6.3.tar.gz压缩包放置在/FVCOM3.2.2/FVCOM_source/lib文件夹下，然后手动编译：</p>
+
+<pre><code>tar zxvf netcdf-3.6.3.tar.gz
+cd netcdf-3.6.3
+
+# 将/THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source改为实际源码目录
+./configure --prefix=/THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source/libs/install 
+
+make &amp;&amp; make install
+cd ..
+</code></pre>
+
+<h3 id="编译fvcom">编译fvcom</h3>
+
+<pre><code>cd /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source
+make
+</code></pre>
+
+<p>生成可执行文件fvcom</p>
+
+<h2 id="报错记录">报错记录</h2>
+
+<h3 id="修改预编译参数">修改预编译参数</h3>
+
+<ul>
+<li>如果不修改DEF_FLAGS，则会报错如下：</li>
+</ul>
+
+<pre><code>mod_prec.f90(20): error #5145: Invalid blank/tab
+include it implicitly at the start of every compilation. It must
+-----------------------------------------------------------^
+mod_prec.f90(29): error #5143: Missing mandatory separating blank
+/* wchar_t uses ISO/IEC 10646 (2nd ed., published 2011-03-15) /
+--------------------------------^
+mod_prec.f90(30): error #5145: Invalid blank/tab
+Unicode 6.0. */
+---------------^
+mod_prec.f90(32): error #5145: Invalid blank/tab
+/* We do not support C11 &lt;threads.h&gt;. */
+-------------------------------------^
+mod_prec.f90(1): catastrophic error: Could not recover from previous syntax error
+compilation aborted for mod_prec.f90 (code 1)
+make: *** [mod_prec.o] Error 1
+</code></pre>
+
+<h3 id="修改makedepends-1">修改makedepends</h3>
+
+<p>如果不修改makedepends文件，则会出现问题：</p>
+
+<pre><code>mod_startup.f90(1079): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [MOD_NESTING]
+   USE MOD_NESTING
+-------^
+mod_startup.f90(1099): error #6404: This name does not have a type, and must have an explicit type.   [NESTING_ON]
+     IF(.NOT. NESTING_ON)THEN
+--------------^
+compilation aborted for mod_startup.f90 (code 1)
+make: *** [mod_startup.o] 错误 1
+</code></pre>
+
+<h3 id="手动编译netcdf">手动编译netcdf</h3>
+
+<p>备注：对于默认提供的netcdf-3.6.2版本，编译报错，故手动下载别的版本：</p>
+
+<pre><code>In file included from ncfortran.h(12),
+                 from fort-attio.c(7):
+cfortran.h(138): error: #error directive: &quot;cfortran.h:  Can't find your environment among:    ...
+   #error &quot;cfortran.h:  Can't find your environment among:\
+    ^
+
+Internal error: null pointer
+
+compilation aborted for fort-attio.c (code 4)
+</code></pre>
+
+<p>曾经尝试设置export CPPFLAGS=&lsquo;-Df2cFortran&rsquo;，但无效，参考的是：<a href="http://www.ncl.ucar.edu/Download/build_from_src.shtml">http://www.ncl.ucar.edu/Download/build_from_src.shtml</a></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">司道军</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-08-30</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/hpc/">HPC</a>
+          
+          <a href="/tags/ocean-modeling/">ocean modeling</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/environment-modules/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Environment Modules</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:daojunsi@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">sidaojun</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
