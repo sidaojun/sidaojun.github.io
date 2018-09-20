@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>http://example.org/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Posts on Ghostwriter example</title>
+    <link>https://sidaojun.com/post/</link>
+    <description>Recent content in Posts on Ghostwriter example</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Si Daojun</copyright>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sidaojun.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/post/environment-modules/</link>
+      <link>https://sidaojun.com/1/01/01/environment-modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/environment-modules/</guid>
+      <guid>https://sidaojun.com/1/01/01/environment-modules/</guid>
       <description>Environment Modules Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。
 一、安装 必要条件 Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）
 安装步骤 按照通常的软件安装步骤进行，分为如下三步： - ./configure &amp;ndash;prefix=/directory/you/want/to/install - make - make install

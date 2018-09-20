@@ -3,26 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/environment-modules/</loc>
+    <loc>https://sidaojun.com/1/01/01/environment-modules/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://sidaojun.com/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://sidaojun.com/post/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sidaojun.com/tags/</loc>
     <priority>0</priority>
   </url>
   
