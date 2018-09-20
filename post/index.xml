@@ -1,68 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Ghostwriter example</title>
-    <link>https://example.com/post/</link>
-    <description>Recent content in Posts on Ghostwriter example</description>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://example.org/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>My Name</copyright>
-    <lastBuildDate>Sun, 28 Sep 2014 02:13:50 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://example.com/2014/09/28/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate>
-      
-      <guid>https://example.com/2014/09/28/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://example.com/2014/04/02/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
-      
-      <guid>https://example.com/2014/04/02/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Migrating from Jekyll</title>
-      <link>https://example.com/2014/04/02/migrate-from-jekyll/</link>
-      <pubDate>Wed, 02 Apr 2014 02:13:50 +0000</pubDate>
-      
-      <guid>https://example.com/2014/04/02/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>https://example.com/2014/04/02/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/2014/04/02/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
     
     <item>
       <title></title>
-      <link>https://example.com/1/01/01/environment-modules/</link>
+      <link>http://example.org/post/environment-modules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/1/01/01/environment-modules/</guid>
+      <guid>http://example.org/post/environment-modules/</guid>
       <description>Environment Modules Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。
 一、安装 必要条件 Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）
 安装步骤 按照通常的软件安装步骤进行，分为如下三步： - ./configure &amp;ndash;prefix=/directory/you/want/to/install - make - make install
@@ -77,21 +30,6 @@ modufile默认版本的设置 可以通过设置要加载的modulefile的默认�
 如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：
 #%Module1.0 ## ## The desired version of GCC ## set ModuleVersion &amp;quot;4.9.4&amp;quot;   定义.modulerc文件 方法如下：
 #%Module1.0 ## ## The desired version of GCC ## module-version &amp;quot;.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://example.com/1/01/01/fvcom-install/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/1/01/01/fvcom-install/</guid>
-      <description>FVCOM FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。
-我将在TH-HPC1系统上安装该软件，以下是安装记录。
-下载 由用户提供：fvcom-3.2.tar.gz (166MB)
-编译 编译环境加载 module add Intel_compiler/16.0.3 module add MPI/Intel/IMPI/5.1.3.210 module add MKL/16.0.3  上传并解压缩 将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。
-tar xvf FVCOM3.2.2.tar.gz cd FVCOM3.2.2/ cd FVCOM_source/  修改配置文件make.inc 先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。
-cp make.inc_example make.inc vim make.inc  然后逐步手动修改相关参数：
-# 修改为实际的源码目录 #========== TOPDIR ======================================================== # TOPDIR is the directory in which this make file and the fvcom source reside TOPDIR = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source #=========================================================================== # 预编译参数 #=========================================================================== # PREPROCESSOR OPTIONS FOR CPP DEF_FLAGS = -P -C -traditional -nostdinc -E #=========================================================================== # 本地安装 #=========================================================================== # LOCAL INSTAL LIBDIR = -L$(INSTALLDIR)/lib INCDIR = -I$(INSTALLDIR)/include #=========================================================================== # 需要用到julian库 #-------------------------------------------------------------------------- # STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM: # DTLIBS = -ljulian DTINCS = #-------------------------------------------------------------------------- # 需要用到netcdf库 #-------------------------------------------------------------------------- # NETCDF OUTPUT NETCDF IS NOW REQUIRED TO COMPILE FVCOM # DUMP OUTPUT INTO NETCDF FILES (yes/no) # REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES # COMPILED WITH SAME F90 COMPILER # SET PATH TO LIBRARIES WITH IOLIBS # SET PATH TO INCLUDE FILES (netcdf.</description>
     </item>
     
   </channel>
