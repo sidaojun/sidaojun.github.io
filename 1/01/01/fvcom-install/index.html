@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> &middot; My Name</title>
+        <meta name="description" content="FVCOM FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。
+我将在TH-HPC1系统上安装该软件，以下是安装记录。
+下载 由用户提供：fvcom-3.2.tar.gz (166MB)
+编译 编译环境加载 module add Intel_compiler/16.0.3 module add MPI/Intel/IMPI/5.1.3.210 module add MKL/16.0.3  上传并解压缩 将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。
+tar xvf FVCOM3.2.2.tar.gz cd FVCOM3.2.2/ cd FVCOM_source/  修改配置文件make.inc 先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。
+cp make.inc_example make.inc vim make.inc  然后逐步手动修改相关参数：
+# 修改为实际的源码目录 #========== TOPDIR ======================================================== # TOPDIR is the directory in which this make file and the fvcom source reside TOPDIR = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source #=========================================================================== # 预编译参数 #=========================================================================== # PREPROCESSOR OPTIONS FOR CPP DEF_FLAGS = -P -C -traditional -nostdinc -E #=========================================================================== # 本地安装 #=========================================================================== # LOCAL INSTAL LIBDIR = -L$(INSTALLDIR)/lib INCDIR = -I$(INSTALLDIR)/include #=========================================================================== # 需要用到julian库 #-------------------------------------------------------------------------- # STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM: # DTLIBS = -ljulian DTINCS = #-------------------------------------------------------------------------- # 需要用到netcdf库 #-------------------------------------------------------------------------- # NETCDF OUTPUT NETCDF IS NOW REQUIRED TO COMPILE FVCOM # DUMP OUTPUT INTO NETCDF FILES (yes/no) # REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES # COMPILED WITH SAME F90 COMPILER # SET PATH TO LIBRARIES WITH IOLIBS # SET PATH TO INCLUDE FILES (netcdf.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.48" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="">
+<meta property="og:description" content="FVCOM FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。
+我将在TH-HPC1系统上安装该软件，以下是安装记录。
+下载 由用户提供：fvcom-3.2.tar.gz (166MB)
+编译 编译环境加载 module add Intel_compiler/16.0.3 module add MPI/Intel/IMPI/5.1.3.210 module add MKL/16.0.3  上传并解压缩 将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。
+tar xvf FVCOM3.2.2.tar.gz cd FVCOM3.2.2/ cd FVCOM_source/  修改配置文件make.inc 先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。
+cp make.inc_example make.inc vim make.inc  然后逐步手动修改相关参数：
+# 修改为实际的源码目录 #========== TOPDIR ======================================================== # TOPDIR is the directory in which this make file and the fvcom source reside TOPDIR = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source #=========================================================================== # 预编译参数 #=========================================================================== # PREPROCESSOR OPTIONS FOR CPP DEF_FLAGS = -P -C -traditional -nostdinc -E #=========================================================================== # 本地安装 #=========================================================================== # LOCAL INSTAL LIBDIR = -L$(INSTALLDIR)/lib INCDIR = -I$(INSTALLDIR)/include #=========================================================================== # 需要用到julian库 #-------------------------------------------------------------------------- # STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM: # DTLIBS = -ljulian DTINCS = #-------------------------------------------------------------------------- # 需要用到netcdf库 #-------------------------------------------------------------------------- # NETCDF OUTPUT NETCDF IS NOW REQUIRED TO COMPILE FVCOM # DUMP OUTPUT INTO NETCDF FILES (yes/no) # REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES # COMPILED WITH SAME F90 COMPILER # SET PATH TO LIBRARIES WITH IOLIBS # SET PATH TO INCLUDE FILES (netcdf.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://example.com/1/01/01/fvcom-install/">
+        <link rel="stylesheet" href="https://example.com/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Ghostwriter example" href="https://example.com/">Ghostwriter example</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://example.com/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/XXX">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="https://gitlab.com/XXX">
+                                <i class="fa fa-gitlab"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/XXX">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/XXX/YYY">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/XXX/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;XXX">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:XXX@example.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Getting Started with Hugo" href="/2014/04/02/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"></h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="0001-01-01" itemprop="datePublished">Mon, Jan 1, 0001</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;XXX" itemprop="url" rel="author">My Name</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<h1 id="fvcom">FVCOM</h1>
+
+<p>FVCOM是无结构三角形网格架构、有限体积、自由表面、三维原始方程海洋数值模型。</p>
+
+<p>我将在TH-HPC1系统上安装该软件，以下是安装记录。</p>
+
+<h2 id="下载">下载</h2>
+
+<p>由用户提供：fvcom-3.2.tar.gz (166MB)</p>
+
+<h2 id="编译">编译</h2>
+
+<h3 id="编译环境加载">编译环境加载</h3>
+
+<pre><code>module add Intel_compiler/16.0.3 
+module add MPI/Intel/IMPI/5.1.3.210
+module add MKL/16.0.3
+</code></pre>
+
+<h3 id="上传并解压缩">上传并解压缩</h3>
+
+<p>将fvcom-3.2.tar.gz压缩包上传到系统，然后解压缩。</p>
+
+<pre><code>tar xvf FVCOM3.2.2.tar.gz
+cd FVCOM3.2.2/
+cd FVCOM_source/
+</code></pre>
+
+<h3 id="修改配置文件make-inc">修改配置文件make.inc</h3>
+
+<p>先拷贝一份make.inc文件，然后打开该文件，逐步修改参数。</p>
+
+<pre><code>cp make.inc_example  make.inc
+vim make.inc
+</code></pre>
+
+<p>然后逐步手动修改相关参数：</p>
+
+<pre><code># 修改为实际的源码目录
+#========== TOPDIR ========================================================
+# TOPDIR is the directory in which this make file and the fvcom source reside
+           TOPDIR        = /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source
+#===========================================================================
+
+# 预编译参数
+#===========================================================================
+# PREPROCESSOR OPTIONS FOR CPP
+            DEF_FLAGS     = -P -C -traditional -nostdinc -E
+#===========================================================================
+
+# 本地安装
+#===========================================================================
+# LOCAL INSTAL
+             LIBDIR       =  -L$(INSTALLDIR)/lib
+             INCDIR       =  -I$(INSTALLDIR)/include
+#===========================================================================
+
+# 需要用到julian库
+#--------------------------------------------------------------------------
+#       STANDARD LIBRARIES FOR DATA AND TIME IN fVCOM:
+#
+            DTLIBS      = -ljulian
+            DTINCS      =
+#--------------------------------------------------------------------------
+
+# 需要用到netcdf库
+#--------------------------------------------------------------------------
+#        NETCDF OUTPUT      NETCDF IS NOW REQUIRED TO COMPILE FVCOM
+#                           DUMP OUTPUT INTO NETCDF FILES (yes/no)
+#                           REQUIRES SYSTEM DEPENDENT NETCDF LIBRARIES
+#                           COMPILED WITH SAME F90 COMPILER
+#                           SET PATH TO LIBRARIES WITH IOLIBS
+#                           SET PATH TO INCLUDE FILES (netcdf.mod) WITH IOINCS
+#--------------------------------------------------------------------------
+             IOLIBS       =  -lnetcdf
+             IOINCS       =  
+#--------------------------------------------------------------------------
+
+# 需要用到metis库
+#--------------------------------------------------------------------------
+#        MULTI_PROCESSOR    INCLUDES PARALLELIZATION WITH MPI
+#                           REQUIRES LINKING MPI LIBRARIES OR COMPILING
+#                           WITH A PRELINKED SCRIPT (mpif90/mpf90/etc)
+#                           DEFAULT: NO PARALLEL CAPABILITY
+#                           UNCOMMENT TO INCLUDE MPI PARALLEL CAPABILITY
+#--------------------------------------------------------------------------
+             FLAG_4 = -DMULTIPROCESSOR
+             PARLIB = -lmetis
+# --------------------------------------------------------------------------
+
+# 需要用到proj4库
+#--------------------------------------------------------------------------
+#        PROJECTION         A Fortran90 wrapper for the Cartographic projection
+#                           Software, proj4.
+#                           Proj can be obtained from:
+#                           http://www.remotesensing.org/proj/
+#                           Thanks to: USGS
+#
+#                           The Proj fortran bindings can be obtained from:
+#                           http://forge.nesc.ac.uk/projects/glimmer/
+#                           Thanks to: Magnus Hagdorn (Magnus.Hagdorn@ed.ac.uk)
+#
+#                           !! NOTE THAT THE PROJ 4 LIBRARY MUST BE IN YOUR
+#                           LD_LIBRARY_PATH FOR DYNAMIC LOADING!!
+#
+#--------------------------------------------------------------------------
+             FLAG_6 = -DPROJ
+             PROJLIBS       = -lfproj4 -lproj -lm
+             PROJINCS       =
+#--------------------------------------------------------------------------
+
+# 需要用到mkl库
+#--------------------------------------------------------------------------
+#        DATA_ASSIMILATION  INCLUDE NUDGING BASED DATA ASSIMILATION FOR
+#                           CURRENT/TEMP/SALINITY/SST
+#                           CAN BE ACTIVATED/DEACTIVATED AT RUN TIME WITH
+#                           INPUT FILE CONTROL.  (SEE exa_run.dat) FILE
+#                           DEFAULT: NO DATA ASSIMILATION INCLUDED
+#                           UNCOMMENT TO INCLUDE DATA ASSIMILATION
+#--------------------------------------------------------------------------
+
+             FLAG_7 = -DDATA_ASSIM
+             OILIB  = -L$(MKLROOT)/lib/intel64 \
+                      -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread
+#--------------------------------------------------------------------------
+
+# 编译参数配置
+#--------------------------------------------------------------------------
+#  Intel/MPI Compiler Definitions (SMAST)
+#--------------------------------------------------------------------------
+         CPP      = /usr/bin/cpp
+         COMPILER = -DIFORT
+         CC       = mpiicc
+         CXX      = mpiicpc
+         CFLAGS   = -O3
+         FC       = mpiifort 
+         OPT      = -O3
+#--------------------------------------------------------------------------
+</code></pre>
+
+<p><strong>其他模块的选择，请用户根据自身需求进行配置，但基本上不涉及额外库的编译，仅宏红选项是否开启有关，详见make.inc文件的相关英文说明。</strong></p>
+
+<h2 id="修改makedepends">修改makedepends</h2>
+
+<p>打开makedepends文件，修改其中的内容，可以用如下命令进行文件的修改：</p>
+
+<pre><code>sed -i &quot;s/mod_prec.o : mod_prec.F mod_prec.o/mod_prec.o : mod_prec.F/g&quot; makedepends
+</code></pre>
+
+<p>在48行行尾手动追加&rdquo;mod_nesting.o&rdquo;</p>
+
+<pre><code>mod_startup.o : mod_startup.F ... ... mod_nctools.o mod_utils.o mod_prec.o mod_nesting.o # 48行
+</code></pre>
+
+<h2 id="编译lib库的内容">编译lib库的内容</h2>
+
+<pre><code>cd lib
+vim makefile
+</code></pre>
+
+<p>将以下两行注释掉</p>
+
+<pre><code># cd netcdf &amp;&amp; ./configure CC=$(CC) CFLAGS=-O3 CXX=$(CC) CXXFLAGS=-O3 F77=$(FC) F90=$(FC) FFLAGS=-O3 --prefix=$(MYINSTALLDIR) --build=$(MACHTYPE)
+# cd netcdf &amp;&amp; make install
+</code></pre>
+
+<p>然后编译除了netcdf以外其他库</p>
+
+<pre><code>make
+</code></pre>
+
+<p>我们前往netcdf官网手动下载netcdf-3.6.3版本，将netcdf-3.6.3.tar.gz压缩包放置在/FVCOM3.2.2/FVCOM_source/lib文件夹下，然后手动编译：</p>
+
+<pre><code>tar zxvf netcdf-3.6.3.tar.gz
+cd netcdf-3.6.3
+
+# 将/THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source改为实际源码目录
+./configure --prefix=/THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source/libs/install 
+
+make &amp;&amp; make install
+cd ..
+</code></pre>
+
+<h3 id="编译fvcom">编译fvcom</h3>
+
+<pre><code>cd /THL6/home/zhenggang1/project/fvcom/FVCOM3.2.2/FVCOM_source
+make
+</code></pre>
+
+<p>生成可执行文件fvcom</p>
+
+<h2 id="报错记录">报错记录</h2>
+
+<h3 id="修改预编译参数">修改预编译参数</h3>
+
+<ul>
+<li>如果不修改DEF_FLAGS，则会报错如下：</li>
+</ul>
+
+<pre><code>mod_prec.f90(20): error #5145: Invalid blank/tab
+include it implicitly at the start of every compilation. It must
+-----------------------------------------------------------^
+mod_prec.f90(29): error #5143: Missing mandatory separating blank
+/* wchar_t uses ISO/IEC 10646 (2nd ed., published 2011-03-15) /
+--------------------------------^
+mod_prec.f90(30): error #5145: Invalid blank/tab
+Unicode 6.0. */
+---------------^
+mod_prec.f90(32): error #5145: Invalid blank/tab
+/* We do not support C11 &lt;threads.h&gt;. */
+-------------------------------------^
+mod_prec.f90(1): catastrophic error: Could not recover from previous syntax error
+compilation aborted for mod_prec.f90 (code 1)
+make: *** [mod_prec.o] Error 1
+</code></pre>
+
+<h3 id="修改makedepends-1">修改makedepends</h3>
+
+<p>如果不修改makedepends文件，则会出现问题：</p>
+
+<pre><code>mod_startup.f90(1079): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [MOD_NESTING]
+   USE MOD_NESTING
+-------^
+mod_startup.f90(1099): error #6404: This name does not have a type, and must have an explicit type.   [NESTING_ON]
+     IF(.NOT. NESTING_ON)THEN
+--------------^
+compilation aborted for mod_startup.f90 (code 1)
+make: *** [mod_startup.o] 错误 1
+</code></pre>
+
+<h3 id="手动编译netcdf">手动编译netcdf</h3>
+
+<p>备注：对于默认提供的netcdf-3.6.2版本，编译报错，故手动下载别的版本：</p>
+
+<pre><code>In file included from ncfortran.h(12),
+                 from fort-attio.c(7):
+cfortran.h(138): error: #error directive: &quot;cfortran.h:  Can't find your environment among:    ...
+   #error &quot;cfortran.h:  Can't find your environment among:\
+    ^
+
+Internal error: null pointer
+
+compilation aborted for fort-attio.c (code 4)
+</code></pre>
+
+<p>曾经尝试设置export CPPFLAGS=&lsquo;-Df2cFortran&rsquo;，但无效，参考的是：<a href="http://www.ncl.ucar.edu/Download/build_from_src.shtml">http://www.ncl.ucar.edu/Download/build_from_src.shtml</a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=&url=https%3a%2f%2fexample.com%2f1%2f01%2f01%2ffvcom-install%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2f1%2f01%2f01%2ffvcom-install%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fexample.com%2f1%2f01%2f01%2ffvcom-install%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Ghostwriter example" href="https://example.com/">Ghostwriter example</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2014 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://example.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://example.com/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="https://example.com/js/scripts.js"></script>
+    </body>
+</html>
+

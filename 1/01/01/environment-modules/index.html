@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> &middot; My Name</title>
+        <meta name="description" content="Environment Modules Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。
+一、安装 必要条件 Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）
+安装步骤 按照通常的软件安装步骤进行，分为如下三步： - ./configure &ndash;prefix=/directory/you/want/to/install - make - make install
+官方安装说明网址 https://modules.readthedocs.io/en/stable/INSTALL.html
+二、module的配置和使用 初始化操作 为了每次登陆shell时，可以使用module，需要进行初始化操作，执行如下命令：
+source /directory/you/want/to/install/init/bash  不同的shell类型执行对应脚本。
+modulefiles路径的定义 module对环境变量的修改是通过操作modulefiles来实现的，因此需要对此进行定义。有以下几种方式： - 编辑init目录下的modulerc文件； - 编辑init目录下的.modulespath文件； - 在.bashrc中添加命令module use 文件名，类似:
+module use /path/to/modulefiles  建议采用前面两种方式。
+环境变量MODULEPATH保存了包含modulefiles的路径，即系统查找modulefiles的路径。
+modulefiles文件的定位 系统会搜索MODULEPATH中的每个目录。MODULEPATH中的目录可以有很多层。如果用户加载的modulefile是个目录，系统会向下搜索真正的modulefile文件。
+modufile默认版本的设置 可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式： - 定义.version文件
+如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：
+#%Module1.0 ## ## The desired version of GCC ## set ModuleVersion &quot;4.9.4&quot;   定义.modulerc文件 方法如下：
+#%Module1.0 ## ## The desired version of GCC ## module-version &quot;.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.48" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="">
+<meta property="og:description" content="Environment Modules Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。
+一、安装 必要条件 Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）
+安装步骤 按照通常的软件安装步骤进行，分为如下三步： - ./configure &ndash;prefix=/directory/you/want/to/install - make - make install
+官方安装说明网址 https://modules.readthedocs.io/en/stable/INSTALL.html
+二、module的配置和使用 初始化操作 为了每次登陆shell时，可以使用module，需要进行初始化操作，执行如下命令：
+source /directory/you/want/to/install/init/bash  不同的shell类型执行对应脚本。
+modulefiles路径的定义 module对环境变量的修改是通过操作modulefiles来实现的，因此需要对此进行定义。有以下几种方式： - 编辑init目录下的modulerc文件； - 编辑init目录下的.modulespath文件； - 在.bashrc中添加命令module use 文件名，类似:
+module use /path/to/modulefiles  建议采用前面两种方式。
+环境变量MODULEPATH保存了包含modulefiles的路径，即系统查找modulefiles的路径。
+modulefiles文件的定位 系统会搜索MODULEPATH中的每个目录。MODULEPATH中的目录可以有很多层。如果用户加载的modulefile是个目录，系统会向下搜索真正的modulefile文件。
+modufile默认版本的设置 可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式： - 定义.version文件
+如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：
+#%Module1.0 ## ## The desired version of GCC ## set ModuleVersion &quot;4.9.4&quot;   定义.modulerc文件 方法如下：
+#%Module1.0 ## ## The desired version of GCC ## module-version &quot;.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://example.com/1/01/01/environment-modules/">
+        <link rel="stylesheet" href="https://example.com/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Ghostwriter example" href="https://example.com/">Ghostwriter example</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://example.com/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/XXX">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="https://gitlab.com/XXX">
+                                <i class="fa fa-gitlab"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/XXX">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/XXX/YYY">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/XXX/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;XXX">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:XXX@example.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/project/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Getting Started with Hugo" href="/2014/04/02/hugoisforlovers/">Getting Started with Hugo</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"></h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="0001-01-01" itemprop="datePublished">Mon, Jan 1, 0001</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;XXX" itemprop="url" rel="author">My Name</a>
+            </span>
+        </span>
+    </p>
+</header>
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<h1 id="environment-modules">Environment Modules</h1>
+
+<p>Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。</p>
+
+<h2 id="一-安装">一、安装</h2>
+
+<h3 id="必要条件">必要条件</h3>
+
+<p>Modules的安装依赖tclsh，因此必须首先在系统中安装tcl（版本8.4以上）</p>
+
+<h3 id="安装步骤">安装步骤</h3>
+
+<p>按照通常的软件安装步骤进行，分为如下三步：
+- ./configure &ndash;prefix=/directory/you/want/to/install
+- make
+- make install</p>
+
+<h3 id="官方安装说明网址">官方安装说明网址</h3>
+
+<p><a href="https://modules.readthedocs.io/en/stable/INSTALL.html">https://modules.readthedocs.io/en/stable/INSTALL.html</a></p>
+
+<h2 id="二-module的配置和使用">二、module的配置和使用</h2>
+
+<h3 id="初始化操作">初始化操作</h3>
+
+<p>为了每次登陆shell时，可以使用module，需要进行初始化操作，执行如下命令：</p>
+
+<pre><code>source /directory/you/want/to/install/init/bash
+</code></pre>
+
+<p>不同的shell类型执行对应脚本。</p>
+
+<h3 id="modulefiles路径的定义">modulefiles路径的定义</h3>
+
+<p>module对环境变量的修改是通过操作modulefiles来实现的，因此需要对此进行定义。有以下几种方式：
+- 编辑init目录下的modulerc文件；
+- 编辑init目录下的.modulespath文件；
+- 在.bashrc中添加命令module use 文件名，类似:</p>
+
+<pre><code>module use /path/to/modulefiles
+</code></pre>
+
+<p>建议采用前面两种方式。</p>
+
+<p><strong>环境变量MODULEPATH保存了包含modulefiles的路径，即系统查找modulefiles的路径。</strong></p>
+
+<h3 id="modulefiles文件的定位">modulefiles文件的定位</h3>
+
+<p>系统会搜索MODULEPATH中的每个目录。MODULEPATH中的目录可以有很多层。如果用户加载的modulefile是个目录，系统会向下搜索真正的modulefile文件。</p>
+
+<h3 id="modufile默认版本的设置">modufile默认版本的设置</h3>
+
+<p>可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式：
+- 定义.version文件<br />
+如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：</p>
+
+<pre><code>#%Module1.0
+##
+## The desired version of GCC
+##
+set ModuleVersion &quot;4.9.4&quot;
+</code></pre>
+
+<ul>
+<li><p>定义.modulerc文件
+方法如下：</p>
+
+<pre><code>#%Module1.0
+##
+## The desired version of GCC
+##
+module-version &quot;./4.9.4&quot; default
+</code></pre>
+
+<h3 id="module的使用">module的使用</h3></li>
+</ul>
+
+<p>以上就完成了module的配置工作，module的使用可以通过在命令行中输入module &ndash;help查看。常见的有module add、module rm、module swap等命令。</p>
+
+<h2 id="三-modulefile的编写">三、modulefile的编写</h2>
+
+<p>前面说到module对环境变量的修改需要操作modulefile，因此需要为要使用的应用软件编写对应的modulefile。modulefile的编写步骤如下：</p>
+
+<h3 id="modulefile文件的开头">modulefile文件的开头</h3>
+
+<p>一个modulefile以#%Module开头，后面跟版本号，当前的modulefile版本号是1.0，所以modulefile第一行为#%Module1.0。<br />
+注意：如果没有#%Module开头的一行，则moduelcmd.tcl不能够解析modulefile；如果版本号不存在，modulecmd.tcl假设modulefile和最新的版本兼容；版本号是有用的，因为modulefile格式可能会变。</p>
+
+<h3 id="modulefile中的命令">modulefile中的命令</h3>
+
+<p>modulefile使用的是tcl命令，常用的命令有：
+- puts：puts命令用来输出字符串
+- setenv：用来设置环境变量，它不会改变用户的环境变量。e.g. setenv prefix /install/directory</p>
+
+<ul>
+<li><p>apend-path和prepend-path：用来在前面或者后面增加环境变量的值。e.g. prepend-path PATH $prefix/bin  注意：当向环境变量中增加值时，建议使用append-path，在必要的时候使用prepend-path，如想要覆盖系统中的默认软件版本。</p></li>
+
+<li><p>prereq和conflict：它们用来控制modufile是否可以被加载。prereq命令用来定义当前的modufile被加载之前，哪些modulefiles必须先被加载。conflict命令用来定义哪些modulefiles和当前modulefile冲突。prereq和conflict后的变量可以是目录。</p></li>
+
+<li><p>module-whatis：用来定义命令行中输入module whatis命令后响应的字符串。e.g. 在命令行中输入module whatis GCC/4.6.1</p></li>
+
+<li><p>uname：uname命令提供系统信息的查找，如：uname sysname的结果为操作系统的名字</p></li>
+</ul>
+
+<h2 id="四-一个简单的case">四、一个简单的case</h2>
+
+<pre><code>#%Module1.0
+##
+## modules modulefile
+##
+## modulefiles/modules.  Generated from modules.in by configure.
+##
+proc ModulesHelp { } {
+                global version prefix
+
+                puts stderr &quot;\tAdds gcc compiler to your environment variables.&quot;
+                puts stderr &quot;\n\tThis adds $prefix/* to several of the&quot;
+                puts stderr &quot;\tenvironment variables.&quot;
+                puts stderr &quot;\n\tVersion $version\n&quot;
+}
+
+module-whatis   &quot;gcc/4.6.1&quot;
+
+# for Tcl script use only
+set     version         gcc/gcc4.6.1
+set     prefix          /vol-th/software/gcc-4.6.1
+set     exec_prefix     ${prefix}
+set     datarootdir     ${prefix}/share
+set     INSTALL_DIR     ${prefix}
+
+conflict                gcc
+prepend-path            PATH    $prefix/bin
+prepend-path            LD_LIBRARY_PATH $prefix/lib64
+prepend-path            MANPATH $prefix/share/man
+</code></pre>
+
+<h2 id="五-参考">五、参考</h2>
+
+<p>官方网址：<a href="https://modules.readthedocs.io/en/stable/index.html">https://modules.readthedocs.io/en/stable/index.html</a></p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=&url=https%3a%2f%2fexample.com%2f1%2f01%2f01%2fenvironment-modules%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2f1%2f01%2f01%2fenvironment-modules%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fexample.com%2f1%2f01%2f01%2fenvironment-modules%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Ghostwriter example" href="https://example.com/">Ghostwriter example</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2014 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://example.com/js/jquery-1.11.3.min.js"></script>
+        <script src="https://example.com/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="https://example.com/js/scripts.js"></script>
+    </body>
+</html>
+
