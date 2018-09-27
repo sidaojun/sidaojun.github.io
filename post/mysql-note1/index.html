@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MySQL必知必会（一） - sidaojun&#39;s website</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="司道军" />
+  <meta name="description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS" />
+
+  <meta name="keywords" content="Hugo, theme, sidaojun" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/mysql-note1/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="MySQL必知必会（一）" />
+<meta property="og:description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/mysql-note1/" /><meta property="article:published_time" content="2018-09-27T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-27T00:00:00&#43;08:00"/>
+<meta itemprop="name" content="MySQL必知必会（一）">
+<meta itemprop="description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS">
+
+
+<meta itemprop="datePublished" content="2018-09-27T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-27T00:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="2144">
+
+
+
+<meta itemprop="keywords" content="MySQL,SQL," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MySQL必知必会（一）"/>
+<meta name="twitter:description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">sidaojun</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item"></li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">sidaojun</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/"></a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MySQL必知必会（一）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-27 </span>
+        <div class="post-category">
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"> 数据库 </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#mysql必知必会-一">MySQL必知必会（一）</a>
+<ul>
+<li><a href="#1-连接和退出mysql服务器">1. 连接和退出MySQL服务器</a></li>
+<li><a href="#2-mysql的帮助">2. MySQL的帮助</a></li>
+<li><a href="#3-创建用户及权限操作">3. 创建用户及权限操作</a></li>
+<li><a href="#4-数据库-表操作">4. 数据库/表操作</a></li>
+<li><a href="#5-修改mysql用户密码的方式">5. 修改MySQL用户密码的方式</a>
+<ul>
+<li><a href="#5-1-修改root密码">5.1 修改root密码</a></li>
+<li><a href="#5-2-通过root用户修改普通用户密码">5.2 通过root用户修改普通用户密码</a></li>
+<li><a href="#5-3-普通用户修改自己的密码">5.3 普通用户修改自己的密码</a></li>
+<li><a href="#5-4-忘记root密码">5.4 忘记root密码</a></li>
+</ul></li>
+<li><a href="#6-参考">6. 参考</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="mysql必知必会-一">MySQL必知必会（一）</h1>
+
+<p>因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。</p>
+
+<h2 id="1-连接和退出mysql服务器">1. 连接和退出MySQL服务器</h2>
+
+<p>连接到MySQL数据库的格式为：
+mysql -h 主机地址 -u 用户名 -p 用户密码</p>
+
+<ul>
+<li><strong>1.1 连接到本机的MySQL</strong></li>
+</ul>
+
+<pre><code>mysql -u username -p
+
+</code></pre>
+
+<p>提示输入密码，连接成功后会在终端看到MySQL的提示符 <strong>mysql&gt;</strong></p>
+
+<p>或者</p>
+
+<pre><code>mysql -u username -p密码
+</code></pre>
+
+<p>注意，密码与p之间没有空格。</p>
+
+<ul>
+<li><strong>1.2 连接到远程机器的MySQL</strong></li>
+</ul>
+
+<pre><code>mysql -h hostip -u username -p
+
+</code></pre>
+
+<ul>
+<li><strong>1.3 退出登录</strong></li>
+</ul>
+
+<p>退出登录请使用exit或者quit。</p>
+
+<h2 id="2-mysql的帮助">2. MySQL的帮助</h2>
+
+<p>MySQL的帮助不同于Linux系统中的-h或者&ndash;help，它有自己的帮助语法；</p>
+
+<ul>
+<li><strong>2.1 直接在终端输入help</strong></li>
+</ul>
+
+<pre><code>mysql&gt; help
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+notee     (\t) Don't write into outfile.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+resetconnection(\x) Clean session context.
+
+For server side help, type 'help contents'
+
+</code></pre>
+
+<ul>
+<li><strong>2.2 在终端输入help contents 或者 ? contents</strong></li>
+</ul>
+
+<pre><code>mysql&gt; help contents
+You asked for help about help category: &quot;Contents&quot;
+For more information, type 'help &lt;item&gt;', where &lt;item&gt; is one of the following
+categories:
+   Account Management
+   Administration
+   Components
+   Compound Statements
+   Data Definition
+   Data Manipulation
+   Data Types
+   Functions
+   Functions and Modifiers for Use with GROUP BY
+   Geographic Features
+   Help Metadata
+   Language Structure
+   Plugins
+   Storage Engines
+   Table Maintenance
+   Transactions
+   User-Defined Functions
+   Utility
+
+mysql&gt; ? contents
+You asked for help about help category: &quot;Contents&quot;
+For more information, type 'help &lt;item&gt;', where &lt;item&gt; is one of the following
+categories:
+   Account Management
+   Administration
+   Components
+   Compound Statements
+   Data Definition
+   Data Manipulation
+   Data Types
+   Functions
+   Functions and Modifiers for Use with GROUP BY
+   Geographic Features
+   Help Metadata
+   Language Structure
+   Plugins
+   Storage Engines
+   Table Maintenance
+   Transactions
+   User-Defined Functions
+   Utility
+
+</code></pre>
+
+<ul>
+<li><strong>2.3 继续查看某一功能的用法</strong></li>
+</ul>
+
+<p>如账号管理相关功能：</p>
+
+<pre><code>mysql&gt; ? Account Management;
+You asked for help about help category: &quot;Account Management&quot;
+For more information, type 'help &lt;item&gt;', where &lt;item&gt; is one of the following
+topics:
+   ALTER RESOURCE GROUP
+   ALTER USER
+   CREATE RESOURCE GROUP
+   CREATE ROLE
+   CREATE USER
+   DROP RESOURCE GROUP
+   DROP ROLE
+   DROP USER
+   GRANT
+   RENAME USER
+   REVOKE
+   SET DEFAULT ROLE
+   SET PASSWORD
+   SET RESOURCE GROUP
+   SET ROLE
+</code></pre>
+
+<h2 id="3-创建用户及权限操作">3. 创建用户及权限操作</h2>
+
+<p>MySQL用户可以分为普通用户和root用户。MySQL默认有一个root用户，root用户是超级管理员，拥有所有权限，包括创建用户、删除用户和修改用户的密码等管理权限；但这个用户权限太大，一般只在管理数据库时使用。最好建立权限较小的普通用户，普通用户只有被授予的各种权限。</p>
+
+<ul>
+<li><strong>3.1 查看目前的用户</strong></li>
+</ul>
+
+<p>在创建用户之前需要先查看目前数据库中有哪些用户，这些信息保存在名为mysql的数据库中，首先切换到mysql数据库：</p>
+
+<pre><code>use mysql;
+
+</code></pre>
+
+<p>然后通过SELECT语句检索所需信息，如下：</p>
+
+<pre><code>mysql&gt; select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| dog              |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
+| sidj             |
+| sidj2            |
+| sidj3            |
+| sidj4            |
+| sidj5            |
+| sidj6            |
++------------------+
+11 rows in set (0.00 sec)
+
+</code></pre>
+
+<p>当然也可以跟更多的关键词，获取其他信息，如：</p>
+
+<pre><code>mysql&gt; select user,host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| dog              | localhost |
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+| sidj             | localhost |
+| sidj2            | localhost |
+| sidj3            | localhost |
+| sidj4            | localhost |
+| sidj5            | localhost |
+| sidj6            | localhost |
++------------------+-----------+
+11 rows in set (0.00 sec)
+
+</code></pre>
+
+<blockquote>
+<p>注意：目前mysql8.0不支持password</p>
+</blockquote>
+
+<pre><code>mysql&gt; select user,host,password from mysql.user;
+ERROR 1054 (42S22): Unknown column 'password' in 'field list'
+</code></pre>
+
+<ul>
+<li><strong>3.2 创建用户</strong></li>
+</ul>
+
+<pre><code>CREATE USER 'sidaojun'@'localhost' IDENTIFIED BY 'password';
+
+</code></pre>
+
+<p>如果希望允许外网ip访问，则将上面的 localhost替换为%即可。
+* <strong>3.3 授权</strong></p>
+
+<p>格式为GRANT privileges ON database.table TO &lsquo;username&rsquo;@&lsquo;hostname&rsquo;;</p>
+
+<pre><code>GRANT ALL PRIVILEGES ON *.* TO 'sidaojun'@'localhost';
+
+</code></pre>
+
+<p>上面的code表示授予用户sidaojun在所有数据库上的所有权限；</p>
+
+<pre><code>grant select on nscctj.sum to 'sidj'@'localhost';
+</code></pre>
+
+<p>上面的code表示授予用户sidj在nscctj.sum的数据表上的查询权限。</p>
+
+<p>如果授权语句后跟with grant option 表示拥有该权限后的用户可以给别的用户授予自身所拥有的权限。</p>
+
+<blockquote>
+<p><strong>特别说明</strong>：<strong><em>在MySQL8.0中，上面的代码后面不要跟IDENTIFIED BY &lsquo;password&rsquo;。</em></strong>
+MySQL8.0创建用户和授权与之前版本不同。MySQL8.0更加严格，MySQL8.0需要先创建用户、设置密码后，才能进行授权。</p>
+
+<p>如果还是采用5.7的语法GRANT ALL PRIVILEGES ON . TO ‘sidaojun’@’localhost’ IDENTIFIED BY ‘123456’，会报错如下：
+Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ‘IDENTIFIED BY ‘123456” at line 1;</p>
+</blockquote>
+
+<ul>
+<li><strong>权限撤销和权限重新设置</strong></li>
+</ul>
+
+<p>如果觉得用户的权限给的太大，想要修改，需要切换到root用户，撤销之前的授权，重新授权。</p>
+
+<pre><code>REVOKE ALL PRIVILEGES ON *.* FROM 'sidaojun'@'localhost';
+GRANT ALL PRIVILEGES ON nscctj.* TO 'sidaojun'@'localhost';
+</code></pre>
+
+<ul>
+<li><strong>3.4 刷新权限</strong></li>
+</ul>
+
+<pre><code>FLUSH PRIVILEGES;
+</code></pre>
+
+<ul>
+<li><strong>3.5 查看权限</strong></li>
+</ul>
+
+<pre><code>SHOW GRANTS FOR sidaojun@localhost；
+
+</code></pre>
+
+<ul>
+<li><strong>3.6 删除用户</strong></li>
+</ul>
+
+<pre><code>drop user username@localhost;
+drop user username@'%';
+
+</code></pre>
+
+<h2 id="4-数据库-表操作">4. 数据库/表操作</h2>
+
+<ul>
+<li><strong>4.1 查询现有数据库/表</strong></li>
+</ul>
+
+<pre><code>show databases;
+show tables;
+describe 数据表名； //显示表结构
+
+</code></pre>
+
+<ul>
+<li><strong>4.2 新建数据库</strong></li>
+</ul>
+
+<pre><code>create databases 数据库名；
+
+</code></pre>
+
+<ul>
+<li><strong>4.3 删除数据库/表</strong></li>
+</ul>
+
+<pre><code>drop database 数据库名；
+drop table 数据表名；
+
+</code></pre>
+
+<ul>
+<li><strong>4.4 将表中记录清空</strong></li>
+</ul>
+
+<pre><code>delete from 表名
+</code></pre>
+
+<ul>
+<li><strong>4.5 当前数据库</strong></li>
+</ul>
+
+<pre><code>select database();
+</code></pre>
+
+<h2 id="5-修改mysql用户密码的方式">5. 修改MySQL用户密码的方式</h2>
+
+<h3 id="5-1-修改root密码">5.1 修改root密码</h3>
+
+<ul>
+<li><strong>5.1.1 连接MySQL后通过alter命令修改root密码</strong></li>
+</ul>
+
+<pre><code>mysql&gt; alter user root@localhost identified by '123456';
+Query OK, 0 rows affected (0.21 sec)
+
+</code></pre>
+
+<ul>
+<li><strong>5.1.2 在连接MySQL前通过mysqladmin命令修改root密码</strong></li>
+</ul>
+
+<pre><code>C:\Program Files\MySQL\MySQL Server 8.0\bin&gt;mysqladmin -u root -psidjmysql password &quot;123456&quot;
+</code></pre>
+
+<blockquote>
+<p>注意：-p的密码是紧跟着的，不能有空格；password后面的密码要使用双引号；如果省略掉-p后面的密码会要求你输入原密码。</p>
+</blockquote>
+
+<ul>
+<li><strong>5.1.3 使用set password语句修改root密码</strong></li>
+</ul>
+
+<pre><code>mysql&gt; set password=password(&quot;sidjmysql&quot;);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'password(&quot;sidjmysql&quot;)' at line 1
+
+mysql&gt; set password=&quot;sidjmysql&quot;;
+Query OK, 0 rows affected (0.16 sec)
+</code></pre>
+
+<blockquote>
+<p>说明：在MySQL8.0以后不支持password语句。</p>
+</blockquote>
+
+<ul>
+<li><strong>5.1.4 直接修改user表</strong></li>
+</ul>
+
+<h3 id="5-2-通过root用户修改普通用户密码">5.2 通过root用户修改普通用户密码</h3>
+
+<ul>
+<li><strong>5.2.1 使用set password 语句修改</strong></li>
+</ul>
+
+<pre><code>mysql&gt; set password for sidj@localhost='123456';
+Query OK, 0 rows affected (0.14 sec)
+</code></pre>
+
+<ul>
+<li><strong>5.2.2 直接修改user表</strong></li>
+</ul>
+
+<h3 id="5-3-普通用户修改自己的密码">5.3 普通用户修改自己的密码</h3>
+
+<pre><code>mysql&gt; set password='123456';
+Query OK, 0 rows affected (0.11 sec)
+</code></pre>
+
+<h3 id="5-4-忘记root密码">5.4 忘记root密码</h3>
+
+<blockquote>
+<p>可参考下面的链接。</p>
+</blockquote>
+
+<h2 id="6-参考">6. 参考</h2>
+
+<p>下面的文章总结的很好，推荐
+<a href="https://segmentfault.com/a/1190000014856560#articleHeader7">https://segmentfault.com/a/1190000014856560#articleHeader7</a></p>
+
+<p><a href="https://www.cnblogs.com/f-ck-need-u/p/8994220.html">https://www.cnblogs.com/f-ck-need-u/p/8994220.html</a></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">司道军</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-09-27</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/mysql/">MySQL</a>
+          
+          <a href="/tags/sql/">SQL</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/fvcom-install/">
+            <span class="next-text nav-default">FVCOM</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:daojunsi@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/sidaojun" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">sidaojun</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

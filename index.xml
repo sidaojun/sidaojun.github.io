@@ -6,10 +6,19 @@
     <description>Recent content on sidaojun&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Sep 2018 08:13:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL必知必会（一）</title>
+      <link>http://localhost:1313/post/mysql-note1/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/mysql-note1/</guid>
+      <description>MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS</description>
+    </item>
     
     <item>
       <title>FVCOM</title>
@@ -35,7 +44,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/about/</guid>
-      <description>关于我 地球物理学专业毕业，现从事HPC（高性能计算）相关工作。 建站目的 工作中涉及多方面工作，希望有所记、有所查，也希望能对相关工作的从业者有</description>
+      <description>关于我 地球物理学专业毕业，现在就职于超算中心，从事HPC（高性能计算）相关工作。 建站目的 工作中涉及多方面工作，希望有所记、有所查，也希望能对</description>
     </item>
     
   </channel>

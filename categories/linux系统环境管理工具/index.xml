@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux系统环境管理工具 on sidaojun&#39;s website</title>
+    <link>http://localhost:1313/categories/linux%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in Linux系统环境管理工具 on sidaojun&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Sep 2018 08:13:50 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/linux%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Environment Modules</title>
+      <link>http://localhost:1313/post/environment-modules/</link>
+      <pubDate>Sat, 15 Sep 2018 08:13:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/environment-modules/</guid>
+      <description>Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。 一、安装 必要条件 Modul</description>
+    </item>
+    
+  </channel>
+</rss>
