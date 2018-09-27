@@ -60,7 +60,7 @@
 
 <meta itemprop="datePublished" content="2018-09-15T08:13:50&#43;00:00" />
 <meta itemprop="dateModified" content="2018-09-15T08:13:50&#43;00:00" />
-<meta itemprop="wordCount" content="1790">
+<meta itemprop="wordCount" content="1789">
 
 
 
@@ -246,9 +246,13 @@
 
 <h3 id="modufile默认版本的设置">modufile默认版本的设置</h3>
 
-<p>可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式：
-- 定义.version文件<br />
-如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：</p>
+<p>可以通过设置要加载的modulefile的默认版本，来定义不知道具体版本时加载的modulefile文件。设置有两种方式：</p>
+
+<ul>
+<li>定义.version文件<br /></li>
+</ul>
+
+<p>如果我们在某个目录（如GCC）下，包含此软件的多个版本，那个可以在该目录下定义.version文件，实现默认版本的设置，如：</p>
 
 <pre><code>#%Module1.0
 ##
@@ -258,8 +262,10 @@ set ModuleVersion &quot;4.9.4&quot;
 </code></pre>
 
 <ul>
-<li><p>定义.modulerc文件
-方法如下：</p>
+<li>定义.modulerc文件</li>
+</ul>
+
+<p>方法如下：</p>
 
 <pre><code>#%Module1.0
 ##
@@ -268,8 +274,7 @@ set ModuleVersion &quot;4.9.4&quot;
 module-version &quot;./4.9.4&quot; default
 </code></pre>
 
-<h3 id="module的使用">module的使用</h3></li>
-</ul>
+<h3 id="module的使用">module的使用</h3>
 
 <p>以上就完成了module的配置工作，module的使用可以通过在命令行中输入module &ndash;help查看。常见的有module add、module rm、module swap等命令。</p>
 

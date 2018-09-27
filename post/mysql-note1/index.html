@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="司道军" />
-  <meta name="description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS" />
+  <meta name="description" content="因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MySQL数据库的格式为： mysql -h" />
 
   <meta name="keywords" content="Hugo, theme, sidaojun" />
 
@@ -50,24 +50,24 @@
 
 
 <meta property="og:title" content="MySQL必知必会（一）" />
-<meta property="og:description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS" />
+<meta property="og:description" content="因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MySQL数据库的格式为： mysql -h" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/mysql-note1/" /><meta property="article:published_time" content="2018-09-27T00:00:00&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-27T00:00:00&#43;08:00"/>
 <meta itemprop="name" content="MySQL必知必会（一）">
-<meta itemprop="description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS">
+<meta itemprop="description" content="因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MySQL数据库的格式为： mysql -h">
 
 
 <meta itemprop="datePublished" content="2018-09-27T00:00:00&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-27T00:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="2144">
+<meta itemprop="wordCount" content="2140">
 
 
 
 <meta itemprop="keywords" content="MySQL,SQL," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL必知必会（一）"/>
-<meta name="twitter:description" content="MySQL必知必会（一） 因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MyS"/>
+<meta name="twitter:description" content="因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。 1. 连接和退出MySQL服务器 连接到MySQL数据库的格式为： mysql -h"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -160,7 +160,7 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#mysql必知必会-一">MySQL必知必会（一）</a>
+<li>
 <ul>
 <li><a href="#1-连接和退出mysql服务器">1. 连接和退出MySQL服务器</a></li>
 <li><a href="#2-mysql的帮助">2. MySQL的帮助</a></li>
@@ -187,8 +187,6 @@
     <div class="post-content">
       
 
-<h1 id="mysql必知必会-一">MySQL必知必会（一）</h1>
-
 <p>因为项目需要，需要创建数据库并进行相关操作，于是调研并学习一些数据库的知识。</p>
 
 <h2 id="1-连接和退出mysql服务器">1. 连接和退出MySQL服务器</h2>
@@ -196,9 +194,7 @@
 <p>连接到MySQL数据库的格式为：
 mysql -h 主机地址 -u 用户名 -p 用户密码</p>
 
-<ul>
-<li><strong>1.1 连接到本机的MySQL</strong></li>
-</ul>
+<p><strong>1.1 连接到本机的MySQL</strong></p>
 
 <pre><code>mysql -u username -p
 
@@ -213,17 +209,13 @@ mysql -h 主机地址 -u 用户名 -p 用户密码</p>
 
 <p>注意，密码与p之间没有空格。</p>
 
-<ul>
-<li><strong>1.2 连接到远程机器的MySQL</strong></li>
-</ul>
+<p><strong>1.2 连接到远程机器的MySQL</strong></p>
 
 <pre><code>mysql -h hostip -u username -p
 
 </code></pre>
 
-<ul>
-<li><strong>1.3 退出登录</strong></li>
-</ul>
+<p><strong>1.3 退出登录</strong></p>
 
 <p>退出登录请使用exit或者quit。</p>
 
@@ -231,9 +223,7 @@ mysql -h 主机地址 -u 用户名 -p 用户密码</p>
 
 <p>MySQL的帮助不同于Linux系统中的-h或者&ndash;help，它有自己的帮助语法；</p>
 
-<ul>
-<li><strong>2.1 直接在终端输入help</strong></li>
-</ul>
+<p><strong>2.1 直接在终端输入help</strong></p>
 
 <pre><code>mysql&gt; help
 
@@ -272,9 +262,7 @@ For server side help, type 'help contents'
 
 </code></pre>
 
-<ul>
-<li><strong>2.2 在终端输入help contents 或者 ? contents</strong></li>
-</ul>
+<p><strong>2.2 在终端输入help contents 或者 ? contents</strong></p>
 
 <pre><code>mysql&gt; help contents
 You asked for help about help category: &quot;Contents&quot;
@@ -324,9 +312,7 @@ categories:
 
 </code></pre>
 
-<ul>
-<li><strong>2.3 继续查看某一功能的用法</strong></li>
-</ul>
+<p><strong>2.3 继续查看某一功能的用法</strong></p>
 
 <p>如账号管理相关功能：</p>
 
@@ -355,9 +341,7 @@ topics:
 
 <p>MySQL用户可以分为普通用户和root用户。MySQL默认有一个root用户，root用户是超级管理员，拥有所有权限，包括创建用户、删除用户和修改用户的密码等管理权限；但这个用户权限太大，一般只在管理数据库时使用。最好建立权限较小的普通用户，普通用户只有被授予的各种权限。</p>
 
-<ul>
-<li><strong>3.1 查看目前的用户</strong></li>
-</ul>
+<p><strong>3.1 查看目前的用户</strong></p>
 
 <p>在创建用户之前需要先查看目前数据库中有哪些用户，这些信息保存在名为mysql的数据库中，首先切换到mysql数据库：</p>
 
@@ -417,16 +401,14 @@ topics:
 ERROR 1054 (42S22): Unknown column 'password' in 'field list'
 </code></pre>
 
-<ul>
-<li><strong>3.2 创建用户</strong></li>
-</ul>
+<p><strong>3.2 创建用户</strong></p>
 
 <pre><code>CREATE USER 'sidaojun'@'localhost' IDENTIFIED BY 'password';
 
 </code></pre>
 
 <p>如果希望允许外网ip访问，则将上面的 localhost替换为%即可。
-* <strong>3.3 授权</strong></p>
+<strong>3.3 授权</strong></p>
 
 <p>格式为GRANT privileges ON database.table TO &lsquo;username&rsquo;@&lsquo;hostname&rsquo;;</p>
 
@@ -451,9 +433,7 @@ MySQL8.0创建用户和授权与之前版本不同。MySQL8.0更加严格，MySQ
 Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ‘IDENTIFIED BY ‘123456” at line 1;</p>
 </blockquote>
 
-<ul>
-<li><strong>权限撤销和权限重新设置</strong></li>
-</ul>
+<p><strong>3.4 权限撤销和权限重新设置</strong></p>
 
 <p>如果觉得用户的权限给的太大，想要修改，需要切换到root用户，撤销之前的授权，重新授权。</p>
 
@@ -461,24 +441,18 @@ Error Code: 1064. You have an error in your SQL syntax; check the manual that co
 GRANT ALL PRIVILEGES ON nscctj.* TO 'sidaojun'@'localhost';
 </code></pre>
 
-<ul>
-<li><strong>3.4 刷新权限</strong></li>
-</ul>
+<p><strong>3.5 刷新权限</strong></p>
 
 <pre><code>FLUSH PRIVILEGES;
 </code></pre>
 
-<ul>
-<li><strong>3.5 查看权限</strong></li>
-</ul>
+<p><strong>3.6 查看权限</strong></p>
 
 <pre><code>SHOW GRANTS FOR sidaojun@localhost；
 
 </code></pre>
 
-<ul>
-<li><strong>3.6 删除用户</strong></li>
-</ul>
+<p><strong>3.7 删除用户</strong></p>
 
 <pre><code>drop user username@localhost;
 drop user username@'%';
@@ -487,9 +461,7 @@ drop user username@'%';
 
 <h2 id="4-数据库-表操作">4. 数据库/表操作</h2>
 
-<ul>
-<li><strong>4.1 查询现有数据库/表</strong></li>
-</ul>
+<p><strong>4.1 查询现有数据库/表</strong></p>
 
 <pre><code>show databases;
 show tables;
@@ -497,33 +469,25 @@ describe 数据表名； //显示表结构
 
 </code></pre>
 
-<ul>
-<li><strong>4.2 新建数据库</strong></li>
-</ul>
+<p><strong>4.2 新建数据库</strong></p>
 
 <pre><code>create databases 数据库名；
 
 </code></pre>
 
-<ul>
-<li><strong>4.3 删除数据库/表</strong></li>
-</ul>
+<p><strong>4.3 删除数据库/表</strong></p>
 
 <pre><code>drop database 数据库名；
 drop table 数据表名；
 
 </code></pre>
 
-<ul>
-<li><strong>4.4 将表中记录清空</strong></li>
-</ul>
+<p><strong>4.4 将表中记录清空</strong></p>
 
 <pre><code>delete from 表名
 </code></pre>
 
-<ul>
-<li><strong>4.5 当前数据库</strong></li>
-</ul>
+<p><strong>4.5 当前数据库</strong></p>
 
 <pre><code>select database();
 </code></pre>
@@ -532,18 +496,14 @@ drop table 数据表名；
 
 <h3 id="5-1-修改root密码">5.1 修改root密码</h3>
 
-<ul>
-<li><strong>5.1.1 连接MySQL后通过alter命令修改root密码</strong></li>
-</ul>
+<p><strong>5.1.1 连接MySQL后通过alter命令修改root密码</strong></p>
 
 <pre><code>mysql&gt; alter user root@localhost identified by '123456';
 Query OK, 0 rows affected (0.21 sec)
 
 </code></pre>
 
-<ul>
-<li><strong>5.1.2 在连接MySQL前通过mysqladmin命令修改root密码</strong></li>
-</ul>
+<p><strong>5.1.2 在连接MySQL前通过mysqladmin命令修改root密码</strong></p>
 
 <pre><code>C:\Program Files\MySQL\MySQL Server 8.0\bin&gt;mysqladmin -u root -psidjmysql password &quot;123456&quot;
 </code></pre>
@@ -552,9 +512,7 @@ Query OK, 0 rows affected (0.21 sec)
 <p>注意：-p的密码是紧跟着的，不能有空格；password后面的密码要使用双引号；如果省略掉-p后面的密码会要求你输入原密码。</p>
 </blockquote>
 
-<ul>
-<li><strong>5.1.3 使用set password语句修改root密码</strong></li>
-</ul>
+<p><strong>5.1.3 使用set password语句修改root密码</strong></p>
 
 <pre><code>mysql&gt; set password=password(&quot;sidjmysql&quot;);
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'password(&quot;sidjmysql&quot;)' at line 1
@@ -567,23 +525,25 @@ Query OK, 0 rows affected (0.16 sec)
 <p>说明：在MySQL8.0以后不支持password语句。</p>
 </blockquote>
 
-<ul>
-<li><strong>5.1.4 直接修改user表</strong></li>
-</ul>
+<p><strong>5.1.4 直接修改user表</strong></p>
+
+<blockquote>
+<p>不推荐。</p>
+</blockquote>
 
 <h3 id="5-2-通过root用户修改普通用户密码">5.2 通过root用户修改普通用户密码</h3>
 
-<ul>
-<li><strong>5.2.1 使用set password 语句修改</strong></li>
-</ul>
+<p><strong>5.2.1 使用set password 语句修改</strong></p>
 
 <pre><code>mysql&gt; set password for sidj@localhost='123456';
 Query OK, 0 rows affected (0.14 sec)
 </code></pre>
 
-<ul>
-<li><strong>5.2.2 直接修改user表</strong></li>
-</ul>
+<p><strong>5.2.2 直接修改user表</strong></p>
+
+<blockquote>
+<p>不推荐。</p>
+</blockquote>
 
 <h3 id="5-3-普通用户修改自己的密码">5.3 普通用户修改自己的密码</h3>
 
