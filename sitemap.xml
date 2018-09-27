@@ -3,15 +3,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/post/environment-modules/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <loc>http://localhost:1313/post/fvcom-install/</loc>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/fvcom-install/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <loc>http://localhost:1313/post/environment-modules/</loc>
+    <lastmod>2018-09-15T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,49 +30,49 @@
   
   <url>
     <loc>http://localhost:1313/tags/environment/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-15T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/hpc/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/hpc-applications/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/ocean-modeling/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-15T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2018-08-30T08:13:50+00:00</lastmod>
+    <lastmod>2018-09-16T08:13:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

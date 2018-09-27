@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Environment on sidaojun - A super concise theme for Hugo</title>
+    <title>Environment on sidaojun&#39;s website</title>
     <link>http://localhost:1313/tags/environment/</link>
-    <description>Recent content in Environment on sidaojun - A super concise theme for Hugo</description>
+    <description>Recent content in Environment on sidaojun&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 30 Aug 2018 08:13:50 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Sep 2018 08:13:50 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/environment/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Environment Modules</title>
       <link>http://localhost:1313/post/environment-modules/</link>
-      <pubDate>Thu, 30 Aug 2018 08:13:50 +0000</pubDate>
+      <pubDate>Sat, 15 Sep 2018 08:13:50 +0000</pubDate>
       
       <guid>http://localhost:1313/post/environment-modules/</guid>
       <description>Environment Modules 是一个用于简化shell初始化的工具，它能够让用户通过modulefiles动态的修改shell中的环境变量。 一、安装 必要条件 Modul</description>
