@@ -6,7 +6,7 @@
     <description>Recent content in Tags on sidaojun&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Sep 2018 08:13:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Nov 2018 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>HPC</title>
       <link>http://localhost:1313/tags/hpc/</link>
-      <pubDate>Sun, 16 Sep 2018 08:13:50 +0000</pubDate>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/hpc/</guid>
       <description></description>
@@ -32,9 +32,18 @@
     <item>
       <title>Ocean modeling</title>
       <link>http://localhost:1313/tags/ocean-modeling/</link>
-      <pubDate>Sun, 16 Sep 2018 08:13:50 +0000</pubDate>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/ocean-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ROMS</title>
+      <link>http://localhost:1313/tags/roms/</link>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/roms/</guid>
       <description></description>
     </item>
     
